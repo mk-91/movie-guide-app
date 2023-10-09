@@ -6,7 +6,7 @@ let result = document.getElementById('result');
 
 let getMovie = () => {
   let movieName = movieNameRef.value;
-  let url = `http://www.ombapi.com/?t=${movieName}&apikey=${key}`;
+  let url = `http://www.ombapi.com/?apikey=${key}&?t=${movieName}&`;
 
   if (movieName.lenght <= 0) {
     //show message if input field is empty
@@ -24,7 +24,7 @@ let getMovie = () => {
               <div>
                 <h2>${data.Title}</h2>
                 <div class="rating">
-                  <img src="stare-icon.svg">
+                  <img src="stare-icon.png">
                   <h4>${data.imdbRating}</h4>
                 </div>
                 <div class="details">
@@ -43,6 +43,17 @@ let getMovie = () => {
 
         `;
         }
+        //when movie dosen't exist in datebase
+        else {
+          result.innerHTML = `<h3 class="msg">${data.Error}</h3>`;
+        }
+      })
+      //when error occurs
+      .catch(() => {
+        result.innerHTML = `<h3 class="msg">Error occured</h3>`;
       });
   }
 };
+
+searchBtn.addEventListener('click', getMovie);
+window.addEventListener('load', getMovie);

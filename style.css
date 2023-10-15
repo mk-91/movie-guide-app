@@ -55,3 +55,25 @@ body {
   border: none;
   cursor: pointer;
 }
+
+#result {
+  color: #fff;
+}
+
+.info {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  margin: 1.2em;
+}
+
+.poster {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}

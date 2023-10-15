@@ -6,7 +6,7 @@ let result = document.getElementById('result');
 
 let getMovie = () => {
   let movieName = movieNameRef.value;
-  let url = `http://www.ombapi.com/?apikey=${key}&?t=${movieName}&`;
+  let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
 
   if (movieName.lenght <= 0) {
     //show message if input field is empty
@@ -24,7 +24,7 @@ let getMovie = () => {
               <div>
                 <h2>${data.Title}</h2>
                 <div class="rating">
-                  <img src="stare-icon.png">
+                  <img src="star-icon.svg">
                   <h4>${data.imdbRating}</h4>
                 </div>
                 <div class="details">

@@ -13,9 +13,9 @@ body {
 }
 
 .container {
-  font-size: 16 px;
+  font-size: 16px;
   width: 90vw;
-  max-width: 37.5 rem;
+  max-width: 37.5rem;
   padding: 3em 1.8em;
   background-color: #1e293b;
   position: absolute;
@@ -76,4 +76,78 @@ h2 {
   font-size: 1.5em;
   font-weight: 600;
   letter-spacing: 0.06em;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  margin: 0.6em 0 0.9em 0;
+}
+
+.rating img {
+  height: 1.2em;
+}
+
+.rating h4 {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.details {
+  display: flex;
+  font-size: 0.95em;
+  gap: 1em;
+  justify-content: center;
+  color: #a0a0a0;
+  margin: 0.6em 0;
+  font-weight: 300;
+}
+
+.genre {
+  display: flex;
+  justify-content: space-around;
+}
+
+.genre div {
+  border: 1px solid #a0a0a0;
+  font-size: 0.75em;
+  padding: 0.4em 1.6em;
+  border-radius: 0.4em;
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 500;
+  margin-top: 1.2em;
+}
+
+p {
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: 1.8em;
+  text-align: justify;
+  color: #a0a0a0;
+}
+
+.msg {
+  text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    font-size: 14px;
+  }
+
+  .poster {
+    margin: auto;
+    width: auto;
+    max-height: 10.8em;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
 }

@@ -17,7 +17,7 @@ let getMovie = () => {
       .then((resp) => resp.json())
       .then((data) => {
         // if movie exist in datebase
-        if (data.Response == 'True') {
+        if (data.Response === 'True') {
           result.innerHTML = `
             <div class="info">
               <img src=${data.Poster} class="poster">
@@ -36,12 +36,12 @@ let getMovie = () => {
                   <div>${data.Genre.split(',').join('</div><div>')}</div>
                 </div>
               </div>
-              <h3>Plot:</h3>
-              <p>${data.Plot}</p>
-              <h3>Cast:</h3>
-              <p>${data.Actors}</p>
-
-        `;
+            </div>
+            <h3>Plot:</h3>
+            <p>${data.Plot}</p>
+            <h3>Cast:</h3>
+            <p>${data.Actors}</p>
+          `;
         }
         //when movie dosen't exist in datebase
         else {
